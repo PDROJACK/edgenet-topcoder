@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  margin: 50px;
+}
+
+.videos {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .App-logo {
