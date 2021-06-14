@@ -7,14 +7,14 @@ import "./App.css";
 const EDGE =
   "https://edge.stg-alefedge.com/v1/content?url=00c104e612cb7f461e6446d77125a0edb3b8a827df1bd1149f3a08cad05d4af7a55612f62cb967e393b53619887a5a4970b4f0b02282fae310df9a5edaeeaa01&api_key=" +
   process.env.REACT_APP_EDGE_API;
-const NORMAL = "https://d29ctshu25jfop.cloudfront.net/aa/raw.mp4";
+  const NORMAL = "https://d29ctshu25jfop.cloudfront.net/aa/raw.mp4";
 
 const url =
   "https://developerapis.stg-alefedge.com/et/api/v1/stream-tech/content/get-all?";
 
 function App() {
   const [edge, setedge] = useState();
-  const [checkEdge, setCheckEdge] = useState(false);
+  const [checkEdge, setCheckEdge] = useState(true);
 
   useEffect(() => {
     const edgeChecker = async () => {
@@ -47,7 +47,7 @@ function App() {
       // setedge(URLs[0].content_url);
     };
 
-    edgeChecker();
+    // edgeChecker();
     // getEdgeUrl();
   }, []);
 
@@ -61,9 +61,7 @@ function App() {
             <h3>EdgeNet Video</h3>
 
             <ReactPlayer url={EDGE} />
-            {/* <video width="750" height="500" controls>
-            <source src={EDGE} type="video/mp4" />
-          </video> */}
+
           </div>
 
           <div className="noedge">
